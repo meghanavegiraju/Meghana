@@ -32,7 +32,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-genai.configure(api_key="AIzaSyDqC73g_9Qi3rQXgysLAQnmoqwus3Nye6o")  
+genai.configure(api_key="AIzaSyC1lx0CfOaNXNPpvroNwV6DBhKR_2qPGSo")  
 gemini = genai.GenerativeModel('gemini-1.5-flash')
 
 embedder = SentenceTransformer('all-MiniLM-L6-v2') 
@@ -40,7 +40,7 @@ embedder = SentenceTransformer('all-MiniLM-L6-v2')
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('my_data.csv')  # Replace with your dataset file name
+        df = pd.read_csv('my data.csv')  # Replace with your dataset file name
         if 'question' not in df.columns or 'answer' not in df.columns:
             st.error("The CSV file must contain 'question' and 'answer' columns.")
             st.stop()
