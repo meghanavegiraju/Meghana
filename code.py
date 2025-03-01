@@ -58,8 +58,8 @@ def load_data():
 
 df, faiss_index = load_data()
 
-st.markdown('<h1 class="chat-font">🤖 Nirmal Gaud Clone Chatbot</h1>', unsafe_allow_html=True)
-st.markdown('<h3 class="chat-font">Ask me anything, and I\'ll respond as Nirmal Gaud!</h3>', unsafe_allow_html=True)
+st.markdown('<h1 class="chat-font">🤖 Meghana Clone Chatbot</h1>', unsafe_allow_html=True)
+st.markdown('<h3 class="chat-font">Ask me anything, and I\'ll respond as Meghana!</h3>', unsafe_allow_html=True)
 st.markdown("---")
 
 def find_closest_question(query, faiss_index, df):
@@ -70,7 +70,7 @@ def find_closest_question(query, faiss_index, df):
     return None
 
 def generate_refined_answer(query, retrieved_answer):
-    prompt = f"""You are Nirmal Gaud, an AI, ML, and DL instructor. Respond to the following question in a friendly and conversational tone:
+    prompt = f"""You are Meghana, an AI&DS Student. Respond to the following question in a friendly and conversational tone:
     Question: {query}
     Retrieved Answer: {retrieved_answer}
     - Provide a detailed and accurate response.
@@ -99,7 +99,7 @@ if prompt := st.chat_input("Ask me anything..."):
                 refined_answer = generate_refined_answer(prompt, retrieved_answer)
                 response = f"**Nirmal Gaud**:\n{refined_answer}"
             else:
-                response = "**Nirmal Gaud**:\nI'm sorry, I cannot answer that question."
+                response = "**Meghana**:\nI'm sorry, I cannot answer that question."
         except Exception as e:
             response = f"An error occurred: {e}"
     
